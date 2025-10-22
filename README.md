@@ -1,6 +1,6 @@
 # Gerardo Marcovics - Portfolio Website
 
-Una web profesional impresionante construida con Astro, inspirada en el nivel de calidad de Rockstar Games. Diseñada para impresionar a empresas como Meta y Riot Games.
+Una web profesional impresionante construida con Astro, inspirada en el nivel de calidad de Rockstar Games.
 
 ## 🚀 Características
 

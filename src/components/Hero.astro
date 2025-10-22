@@ -1,0 +1,155 @@
+---
+// Hero section with impressive visual effects
+import { getTranslations } from '../utils/translations';
+
+const lang = Astro.url.pathname.startsWith('/en') ? 'en' : 'es';
+const t = getTranslations(lang);
+---
+
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+  <!-- Animated Background -->
+  <div class="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black">
+    <!-- Animated particles -->
+    <div class="absolute inset-0">
+      <div class="particle absolute w-1 h-1 bg-green-400 rounded-full animate-pulse" style="top: 20%; left: 10%; animation-delay: 0s;"></div>
+      <div class="particle absolute w-1 h-1 bg-blue-400 rounded-full animate-pulse" style="top: 40%; left: 80%; animation-delay: 1s;"></div>
+      <div class="particle absolute w-1 h-1 bg-red-400 rounded-full animate-pulse" style="top: 60%; left: 20%; animation-delay: 2s;"></div>
+      <div class="particle absolute w-1 h-1 bg-green-400 rounded-full animate-pulse" style="top: 80%; left: 70%; animation-delay: 3s;"></div>
+      <div class="particle absolute w-1 h-1 bg-blue-400 rounded-full animate-pulse" style="top: 30%; left: 50%; animation-delay: 4s;"></div>
+    </div>
+    
+    <!-- Grid pattern -->
+    <div class="absolute inset-0 opacity-10">
+      <div class="grid-pattern"></div>
+    </div>
+  </div>
+  
+  <!-- Main Content -->
+  <div class="relative z-10 container mx-auto px-6 text-center">
+    <div class="max-w-4xl mx-auto">
+      <!-- Greeting -->
+      <div class="mb-8">
+        <span class="inline-block px-4 py-2 bg-gradient-to-r from-green-400/20 to-blue-500/20 border border-green-400/30 rounded-full text-green-400 font-mono text-sm mb-4">
+          {t.hero.greeting}
+        </span>
+      </div>
+      
+      <!-- Main Title -->
+      <h1 class="text-6xl md:text-8xl font-black mb-6 leading-tight">
+        <span class="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent animate-gradient">
+          {t.hero.name}
+        </span>
+        <br>
+        <span class="text-white">
+          Marcovics
+        </span>
+      </h1>
+      
+      <!-- Subtitle -->
+      <div class="mb-12">
+        <h2 class="text-2xl md:text-3xl text-gray-300 mb-4 font-light">
+          {t.hero.title}
+        </h2>
+        <p class="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
+          {t.hero.subtitle}
+        </p>
+      </div>
+      
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+        <a href="#projects" class="group relative px-8 py-4 bg-gradient-to-r from-green-400 to-blue-500 text-black font-bold rounded-lg hover:scale-105 transition-all duration-300 glow">
+            <span class="relative z-10">{t.hero.viewProjects}</span>
+          <div class="absolute inset-0 bg-gradient-to-r from-green-400 to-blue-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition-opacity duration-300"></div>
+        </a>
+        
+        <a href="#contact" class="px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:border-green-400 hover:text-green-400 transition-all duration-300 backdrop-blur-sm">
+          {t.hero.contact}
+        </a>
+      </div>
+      
+      <!-- Tech Stack Preview -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">
+        <div class="tech-item group">
+          <div class="w-16 h-16 mx-auto mb-2 bg-gray-800 rounded-xl flex items-center justify-center group-hover:bg-green-400/20 transition-colors duration-300">
+            <span class="text-2xl">⚛️</span>
+          </div>
+          <span class="text-sm text-gray-400 group-hover:text-green-400 transition-colors duration-300">React</span>
+        </div>
+        
+        <div class="tech-item group">
+          <div class="w-16 h-16 mx-auto mb-2 bg-gray-800 rounded-xl flex items-center justify-center group-hover:bg-green-400/20 transition-colors duration-300">
+            <span class="text-2xl">🟢</span>
+          </div>
+          <span class="text-sm text-gray-400 group-hover:text-green-400 transition-colors duration-300">Nest.js</span>
+        </div>
+        
+        <div class="tech-item group">
+          <div class="w-16 h-16 mx-auto mb-2 bg-gray-800 rounded-xl flex items-center justify-center group-hover:bg-purple-400/20 transition-colors duration-300">
+            <span class="text-2xl">🚀</span>
+          </div>
+          <span class="text-sm text-gray-400 group-hover:text-purple-400 transition-colors duration-300">Astro</span>
+        </div>
+        
+        <div class="tech-item group">
+          <div class="w-16 h-16 mx-auto mb-2 bg-gray-800 rounded-xl flex items-center justify-center group-hover:bg-blue-400/20 transition-colors duration-300">
+            <span class="text-2xl">🔷</span>
+          </div>
+          <span class="text-sm text-gray-400 group-hover:text-blue-400 transition-colors duration-300">TypeScript</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Scroll Indicator -->
+  <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+    <div class="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+      <div class="w-1 h-3 bg-white/50 rounded-full mt-2 animate-pulse"></div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes gradient {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient 3s ease infinite;
+  }
+  
+  .grid-pattern {
+    background-image: 
+      linear-gradient(rgba(0, 255, 136, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 255, 136, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+  
+  .particle {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+      opacity: 0.7;
+    }
+    50% {
+      transform: translateY(-20px) rotate(180deg);
+      opacity: 1;
+    }
+  }
+  
+  .tech-item {
+    transition: transform 0.3s ease;
+  }
+  
+  .tech-item:hover {
+    transform: translateY(-5px);
+  }
+</style>

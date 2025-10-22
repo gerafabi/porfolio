@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Projects from '../components/Projects.astro';
+import Clients from '../components/Clients.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout 
+  title="Gerardo Marcovics - Fullstack Developer"
+  description="Desarrollador Fullstack especializado en React, Nest.js, Astro y tecnologías modernas. Creando experiencias digitales excepcionales para empresas como Meta y Riot Games."
+  image="/og-image.jpg"
+>
+  <Header />
+  <main>
+    <Hero />
+    <About />
+    <Projects />
+    <Clients />
+    <Contact />
+  </main>
+  <Footer />
+</Layout>

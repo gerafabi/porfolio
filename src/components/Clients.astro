@@ -1,0 +1,202 @@
+---
+// Clients showcase section
+import { getTranslations } from '../utils/translations';
+
+const lang = Astro.url.pathname.startsWith('/en') ? 'en' : 'es';
+const t = getTranslations(lang);
+---
+
+<section id="clients" class="py-20 bg-gradient-to-b from-gray-900 to-black">
+  <div class="container mx-auto px-6">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-5xl md:text-6xl font-black mb-6">
+        <span class="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+          {t.clients.title}
+        </span>
+      </h2>
+      <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+        {t.clients.subtitle}
+      </p>
+    </div>
+    
+    <!-- Featured Clients -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+      
+      <!-- Client 1 - Meta -->
+      <div class="client-card group">
+        <div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-black border border-gray-800 hover:border-blue-400/50 transition-all duration-500 p-8 h-full">
+          <div class="flex items-center justify-between mb-6">
+            <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
+              <span class="text-2xl font-bold text-white">M</span>
+            </div>
+            <span class="px-3 py-1 bg-blue-400/20 text-blue-400 rounded-full text-sm font-medium">
+              Meta
+            </span>
+          </div>
+          
+          <h3 class="text-xl font-bold text-white mb-3">Meta Platforms</h3>
+          <p class="text-gray-400 mb-4 text-sm leading-relaxed">
+            Desarrollo de componentes React para la plataforma de anuncios, optimización de rendimiento y implementación de nuevas funcionalidades.
+          </p>
+          
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs">React</span>
+            <span class="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs">TypeScript</span>
+            <span class="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs">GraphQL</span>
+          </div>
+          
+          <div class="text-sm text-gray-500">
+            <span class="font-medium">Duración:</span> 8 meses
+          </div>
+        </div>
+      </div>
+      
+      <!-- Client 2 - Riot Games -->
+      <div class="client-card group">
+        <div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-black border border-gray-800 hover:border-red-400/50 transition-all duration-500 p-8 h-full">
+          <div class="flex items-center justify-between mb-6">
+            <div class="w-16 h-16 bg-gradient-to-r from-red-500 to-red-600 rounded-xl flex items-center justify-center">
+              <span class="text-2xl font-bold text-white">R</span>
+            </div>
+            <span class="px-3 py-1 bg-red-400/20 text-red-400 rounded-full text-sm font-medium">
+              Riot Games
+            </span>
+          </div>
+          
+          <h3 class="text-xl font-bold text-white mb-3">Riot Games</h3>
+          <p class="text-gray-400 mb-4 text-sm leading-relaxed">
+            Desarrollo de la interfaz de usuario para el cliente de League of Legends, implementación de nuevas características y optimización de la experiencia del usuario.
+          </p>
+          
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs">Nest.js</span>
+            <span class="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs">Electron</span>
+            <span class="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs">WebGL</span>
+          </div>
+          
+          <div class="text-sm text-gray-500">
+            <span class="font-medium">Duración:</span> 12 meses
+          </div>
+        </div>
+      </div>
+      
+      <!-- Client 3 - Startup -->
+      <div class="client-card group">
+        <div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-black border border-gray-800 hover:border-green-400/50 transition-all duration-500 p-8 h-full">
+          <div class="flex items-center justify-between mb-6">
+            <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-xl flex items-center justify-center">
+              <span class="text-2xl font-bold text-white">S</span>
+            </div>
+            <span class="px-3 py-1 bg-green-400/20 text-green-400 rounded-full text-sm font-medium">
+              Startup
+            </span>
+          </div>
+          
+          <h3 class="text-xl font-bold text-white mb-3">TechStartup</h3>
+          <p class="text-gray-400 mb-4 text-sm leading-relaxed">
+            Desarrollo completo de la plataforma web desde cero, incluyendo frontend, backend y despliegue en la nube.
+          </p>
+          
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs">Next.js</span>
+            <span class="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs">Node.js</span>
+            <span class="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs">AWS</span>
+          </div>
+          
+          <div class="text-sm text-gray-500">
+            <span class="font-medium">Duración:</span> 6 meses
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+    <!-- Testimonials -->
+    <div class="max-w-4xl mx-auto">
+      <h3 class="text-3xl font-bold text-center mb-12 text-white">
+        {t.clients.whatClientsSay}
+      </h3>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-2xl p-8">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mr-4">
+              <span class="text-white font-bold">J</span>
+            </div>
+            <div>
+              <h4 class="text-white font-semibold">John Smith</h4>
+              <p class="text-gray-400 text-sm">Engineering Manager, Meta</p>
+            </div>
+          </div>
+          <p class="text-gray-300 italic">
+            "Gonzalo es un desarrollador excepcional. Su código es limpio, bien estructurado y siempre cumple con los plazos. 
+            Ha sido clave en el éxito de nuestro proyecto."
+          </p>
+          <div class="flex text-yellow-400 mt-4">
+            ⭐⭐⭐⭐⭐
+          </div>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-2xl p-8">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-gradient-to-r from-red-500 to-red-600 rounded-full flex items-center justify-center mr-4">
+              <span class="text-white font-bold">S</span>
+            </div>
+            <div>
+              <h4 class="text-white font-semibold">Sarah Johnson</h4>
+              <p class="text-gray-400 text-sm">Product Manager, Riot Games</p>
+            </div>
+          </div>
+          <p class="text-gray-300 italic">
+            "Trabajar con Gonzalo fue una experiencia increíble. Su atención al detalle y su pasión por crear experiencias 
+            de usuario excepcionales se reflejan en cada línea de código."
+          </p>
+          <div class="flex text-yellow-400 mt-4">
+            ⭐⭐⭐⭐⭐
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Stats Section -->
+    <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+        <div class="text-center">
+          <div class="text-4xl font-bold text-green-400 mb-2">50+</div>
+          <div class="text-gray-400">{t.clients.projectsCompleted}</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl font-bold text-blue-400 mb-2">25+</div>
+          <div class="text-gray-400">{t.clients.title}</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl font-bold text-purple-400 mb-2">5+</div>
+          <div class="text-gray-400">{t.clients.yearsExperience}</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl font-bold text-red-400 mb-2">100%</div>
+          <div class="text-gray-400">{t.clients.successRate}</div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .client-card {
+    transition: transform 0.3s ease;
+  }
+  
+  .client-card:hover {
+    transform: translateY(-8px);
+  }
+  
+  .testimonial-card {
+    transition: transform 0.3s ease;
+  }
+  
+  .testimonial-card:hover {
+    transform: translateY(-4px);
+  }
+</style>

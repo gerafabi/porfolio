@@ -1,0 +1,144 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  canonical?: string;
+}
+
+const { title, description = "Desarrollador Fullstack especializado en React, Nest.js, Astro y tecnologías modernas. Creando experiencias digitales excepcionales.", image = "/og-image.jpg", canonical } = Astro.props;
+const canonicalURL = new URL(canonical || Astro.url.pathname, Astro.site);
+---
+
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- SEO Meta Tags -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, Astro.site)} />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={new URL(image, Astro.site)} />
+    
+    <!-- Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Gerardo Marcovics",
+        "jobTitle": "Fullstack Developer",
+        "description": "Desarrollador Fullstack especializado en tecnologías modernas",
+        "url": "https://gmarcovics.dev",
+        "sameAs": [
+          "https://github.com/gmarcovics",
+          "https://linkedin.com/in/gmarcovics"
+        ],
+        "knowsAbout": [
+          "React",
+          "Nest.js",
+          "Astro",
+          "TypeScript",
+          "JavaScript",
+          "Fullstack Development"
+        ]
+      }
+    </script>
+  </head>
+  <body class="bg-black text-white font-inter antialiased overflow-x-hidden">
+    <div id="app" class="min-h-screen">
+      <slot />
+    </div>
+    
+    <!-- Global Styles -->
+    <style>
+      :root {
+        --primary: #00ff88;
+        --secondary: #0066ff;
+        --accent: #ff3366;
+        --dark: #0a0a0a;
+        --gray: #1a1a1a;
+        --light-gray: #2a2a2a;
+      }
+      
+      * {
+        box-sizing: border-box;
+      }
+      
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      body {
+        font-family: 'Inter', sans-serif;
+        background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+        background-attachment: fixed;
+      }
+      
+      .font-inter {
+        font-family: 'Inter', sans-serif;
+      }
+      
+      .font-mono {
+        font-family: 'JetBrains Mono', monospace;
+      }
+      
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      
+      ::-webkit-scrollbar-track {
+        background: #1a1a1a;
+      }
+      
+      ::-webkit-scrollbar-thumb {
+        background: #00ff88;
+        border-radius: 4px;
+      }
+      
+      ::-webkit-scrollbar-thumb:hover {
+        background: #00cc6a;
+      }
+      
+      /* Smooth animations */
+      * {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      
+      /* Glow effects */
+      .glow {
+        box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+      }
+      
+      .glow-blue {
+        box-shadow: 0 0 20px rgba(0, 102, 255, 0.3);
+      }
+      
+      .glow-red {
+        box-shadow: 0 0 20px rgba(255, 51, 102, 0.3);
+      }
+    </style>
+  </body>
+</html>

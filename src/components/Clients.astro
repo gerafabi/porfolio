@@ -21,163 +21,115 @@ const t = getTranslations(lang);
     </div>
     
     <!-- Featured Clients -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
       
-      <!-- Client 1 - Meta -->
+      <!-- Client 1 - ElectroMisiones -->
+      <div class="client-card group">
+        <div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-black border border-gray-800 hover:border-orange-400/50 transition-all duration-500 p-8 h-full">
+          <div class="flex items-center justify-center mb-6">
+            <div class="w-32 h-24 bg-white rounded-lg p-4 flex items-center justify-center">
+              <img src="/projects/clients/electromisiones.jpg" alt="ElectroMisiones" class="max-w-full max-h-full object-contain" />
+            </div>
+          </div>
+          
+          <h3 class="text-xl font-bold text-white mb-3 text-center">ElectroMisiones</h3>
+          <p class="text-gray-400 mb-4 text-sm leading-relaxed text-center">
+            {lang === 'es' 
+              ? 'Empresa de energía eléctrica en la provincia de Misiones. Desarrollo de plataformas digitales para gestión de servicios, atención al cliente y sistemas de facturación.'
+              : 'Electric power company in Misiones province. Digital platform development for service management, customer service and billing systems.'}
+          </p>
+          
+          <div class="flex flex-wrap gap-2 mb-6 justify-center">
+            <span class="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs">React</span>
+            <span class="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs">Nest.js</span>
+            <span class="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs">TypeScript</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Client 2 - Gobierno Misiones -->
       <div class="client-card group">
         <div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-black border border-gray-800 hover:border-blue-400/50 transition-all duration-500 p-8 h-full">
-          <div class="flex items-center justify-between mb-6">
-            <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
-              <span class="text-2xl font-bold text-white">M</span>
+          <div class="flex items-center justify-center mb-6">
+            <div class="w-32 h-24 bg-black rounded-lg p-4 flex items-center justify-center">
+              <img src="/projects/clients/gobiernomisiones.png" alt="Gobierno Misiones" class="max-w-full max-h-full object-contain" />
             </div>
-            <span class="px-3 py-1 bg-blue-400/20 text-blue-400 rounded-full text-sm font-medium">
-              Meta
-            </span>
           </div>
           
-          <h3 class="text-xl font-bold text-white mb-3">Meta Platforms</h3>
-          <p class="text-gray-400 mb-4 text-sm leading-relaxed">
-            Desarrollo de componentes React para la plataforma de anuncios, optimización de rendimiento y implementación de nuevas funcionalidades.
+          <h3 class="text-xl font-bold text-white mb-3 text-center">Gobierno de Misiones</h3>
+          <p class="text-gray-400 mb-4 text-sm leading-relaxed text-center">
+            {lang === 'es' 
+              ? 'Gobierno provincial de Misiones, Argentina. Desarrollo de soluciones tecnológicas para modernización digital, sistemas de gestión gubernamental y servicios ciudadanos online.'
+              : 'Provincial government of Misiones, Argentina. Development of technological solutions for digital modernization, government management systems and online citizen services.'}
           </p>
           
-          <div class="flex flex-wrap gap-2 mb-6">
+          <div class="flex flex-wrap gap-2 mb-6 justify-center">
             <span class="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs">React</span>
-            <span class="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs">TypeScript</span>
-            <span class="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs">GraphQL</span>
-          </div>
-          
-          <div class="text-sm text-gray-500">
-            <span class="font-medium">Duración:</span> 8 meses
+            <span class="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs">Node.js</span>
+            <span class="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs">PostgreSQL</span>
           </div>
         </div>
       </div>
       
-      <!-- Client 2 - Riot Games -->
+      <!-- Client 3 - Horianski Broker -->
+      <div class="client-card group">
+        <div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-black border border-gray-800 hover:border-blue-400/50 transition-all duration-500 p-8 h-full">
+          <div class="flex items-center justify-center mb-6">
+            <div class="w-32 h-24 bg-black rounded-lg p-4 flex items-center justify-center">
+              <img src="/projects/logos/horianskilogo.png" alt="Horianski Broker" class="max-w-full max-h-full object-contain" />
+            </div>
+          </div>
+          
+          <h3 class="text-xl font-bold text-white mb-3 text-center">Horianski Broker</h3>
+          <p class="text-gray-400 mb-4 text-sm leading-relaxed text-center">
+            {lang === 'es' 
+              ? 'Corredor de seguros especializado. Desarrollo de plataformas digitales para gestión de pólizas, cotizaciones y atención al cliente del sector asegurador.'
+              : 'Insurance broker specialized in digital solutions. Development of platforms for policy management, quotes and customer service in the insurance sector.'}
+          </p>
+          
+          <div class="flex flex-wrap gap-2 mb-6 justify-center">
+            <span class="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs">React</span>
+            <span class="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs">Nest.js</span>
+            <span class="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs">TypeScript</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Client 4 - Tienda Full -->
       <div class="client-card group">
         <div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-black border border-gray-800 hover:border-red-400/50 transition-all duration-500 p-8 h-full">
-          <div class="flex items-center justify-between mb-6">
-            <div class="w-16 h-16 bg-gradient-to-r from-red-500 to-red-600 rounded-xl flex items-center justify-center">
-              <span class="text-2xl font-bold text-white">R</span>
+          <div class="flex items-center justify-center mb-6">
+            <div class="w-32 h-24 bg-white rounded-lg p-4 flex items-center justify-center">
+              <img src="/projects/logos/tiendafulllogo.png" alt="Tienda Full" class="max-w-full max-h-full object-contain" />
             </div>
-            <span class="px-3 py-1 bg-red-400/20 text-red-400 rounded-full text-sm font-medium">
-              Riot Games
-            </span>
           </div>
           
-          <h3 class="text-xl font-bold text-white mb-3">Riot Games</h3>
-          <p class="text-gray-400 mb-4 text-sm leading-relaxed">
-            Desarrollo de la interfaz de usuario para el cliente de League of Legends, implementación de nuevas características y optimización de la experiencia del usuario.
+          <h3 class="text-xl font-bold text-white mb-3 text-center">Tienda Full</h3>
+          <p class="text-gray-400 mb-4 text-sm leading-relaxed text-center">
+            {lang === 'es' 
+              ? 'Tienda de motos y bicicletas en Posadas, Misiones. Desarrollo del sistema de reservas para mantenimiento de vehículos, gestión de turnos y administración de servicios.'
+              : 'Motorcycle and bicycle shop in Posadas, Misiones. Development of booking system for vehicle maintenance, appointment management and service administration.'}
           </p>
           
-          <div class="flex flex-wrap gap-2 mb-6">
+          <div class="flex flex-wrap gap-2 mb-6 justify-center">
+            <span class="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs">React</span>
             <span class="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs">Nest.js</span>
-            <span class="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs">Electron</span>
-            <span class="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs">WebGL</span>
-          </div>
-          
-          <div class="text-sm text-gray-500">
-            <span class="font-medium">Duración:</span> 12 meses
+            <span class="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs">PostgreSQL</span>
           </div>
         </div>
       </div>
       
-      <!-- Client 3 - Startup -->
-      <div class="client-card group">
-        <div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-black border border-gray-800 hover:border-green-400/50 transition-all duration-500 p-8 h-full">
-          <div class="flex items-center justify-between mb-6">
-            <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-xl flex items-center justify-center">
-              <span class="text-2xl font-bold text-white">S</span>
-            </div>
-            <span class="px-3 py-1 bg-green-400/20 text-green-400 rounded-full text-sm font-medium">
-              Startup
-            </span>
-          </div>
-          
-          <h3 class="text-xl font-bold text-white mb-3">TechStartup</h3>
-          <p class="text-gray-400 mb-4 text-sm leading-relaxed">
-            Desarrollo completo de la plataforma web desde cero, incluyendo frontend, backend y despliegue en la nube.
-          </p>
-          
-          <div class="flex flex-wrap gap-2 mb-6">
-            <span class="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs">Next.js</span>
-            <span class="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs">Node.js</span>
-            <span class="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs">AWS</span>
-          </div>
-          
-          <div class="text-sm text-gray-500">
-            <span class="font-medium">Duración:</span> 6 meses
-          </div>
-        </div>
-      </div>
-      
-    </div>
-    
-    <!-- Testimonials -->
-    <div class="max-w-4xl mx-auto">
-      <h3 class="text-3xl font-bold text-center mb-12 text-white">
-        {t.clients.whatClientsSay}
-      </h3>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- Testimonial 1 -->
-        <div class="testimonial-card bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-2xl p-8">
-          <div class="flex items-center mb-4">
-            <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mr-4">
-              <span class="text-white font-bold">J</span>
-            </div>
-            <div>
-              <h4 class="text-white font-semibold">John Smith</h4>
-              <p class="text-gray-400 text-sm">Engineering Manager, Meta</p>
-            </div>
-          </div>
-          <p class="text-gray-300 italic">
-            "Gonzalo es un desarrollador excepcional. Su código es limpio, bien estructurado y siempre cumple con los plazos. 
-            Ha sido clave en el éxito de nuestro proyecto."
-          </p>
-          <div class="flex text-yellow-400 mt-4">
-            ⭐⭐⭐⭐⭐
-          </div>
-        </div>
-        
-        <!-- Testimonial 2 -->
-        <div class="testimonial-card bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-2xl p-8">
-          <div class="flex items-center mb-4">
-            <div class="w-12 h-12 bg-gradient-to-r from-red-500 to-red-600 rounded-full flex items-center justify-center mr-4">
-              <span class="text-white font-bold">S</span>
-            </div>
-            <div>
-              <h4 class="text-white font-semibold">Sarah Johnson</h4>
-              <p class="text-gray-400 text-sm">Product Manager, Riot Games</p>
-            </div>
-          </div>
-          <p class="text-gray-300 italic">
-            "Trabajar con Gonzalo fue una experiencia increíble. Su atención al detalle y su pasión por crear experiencias 
-            de usuario excepcionales se reflejan en cada línea de código."
-          </p>
-          <div class="flex text-yellow-400 mt-4">
-            ⭐⭐⭐⭐⭐
-          </div>
-        </div>
-      </div>
     </div>
     
     <!-- Stats Section -->
-    <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+    <div class="mt-20 grid grid-cols-2 gap-8 max-w-2xl mx-auto">
         <div class="text-center">
-          <div class="text-4xl font-bold text-green-400 mb-2">50+</div>
+          <div class="text-4xl font-bold text-green-400 mb-2">20+</div>
           <div class="text-gray-400">{t.clients.projectsCompleted}</div>
-        </div>
-        <div class="text-center">
-          <div class="text-4xl font-bold text-blue-400 mb-2">25+</div>
-          <div class="text-gray-400">{t.clients.title}</div>
         </div>
         <div class="text-center">
           <div class="text-4xl font-bold text-purple-400 mb-2">5+</div>
           <div class="text-gray-400">{t.clients.yearsExperience}</div>
-        </div>
-        <div class="text-center">
-          <div class="text-4xl font-bold text-red-400 mb-2">100%</div>
-          <div class="text-gray-400">{t.clients.successRate}</div>
         </div>
     </div>
   </div>
@@ -200,3 +152,4 @@ const t = getTranslations(lang);
     transform: translateY(-4px);
   }
 </style>
+

@@ -146,8 +146,8 @@ const t = getTranslations(lang);
               </div>
               <p class="text-gray-400 text-sm">
                 {lang === 'es' 
-                  ? 'Actualmente estoy disponible para proyectos freelance y colaboraciones. Tiempo de respuesta: 24 horas.'
-                  : 'I am currently available for freelance projects and collaborations. Response time: 24 hours.'
+                  ? 'Actualmente estoy disponible para proyectos freelance y colaboraciones. Horario de respuesta: 10am a 20pm (Argentina).'
+                  : 'I am currently available for freelance projects and collaborations. Response time: 10am to 8pm (Argentina).'
                 }
               </p>
             </div>
@@ -155,12 +155,12 @@ const t = getTranslations(lang);
             <!-- Quick Stats -->
             <div class="grid grid-cols-2 gap-4">
               <div class="text-center p-4 bg-gray-800/50 rounded-lg border border-gray-700">
-                <div class="text-2xl font-bold text-green-400">24h</div>
-                <div class="text-gray-400 text-sm">{t.contact.responseTime}</div>
+                <div class="text-lg font-bold text-green-400 mb-1" id="argentina-time"></div>
+                <div class="text-gray-400 text-xs">{lang === 'es' ? 'Hora Argentina' : 'Argentina Time'}</div>
               </div>
               <div class="text-center p-4 bg-gray-800/50 rounded-lg border border-gray-700">
-                <div class="text-2xl font-bold text-blue-400">100%</div>
-                <div class="text-gray-400 text-sm">{t.contact.successRate}</div>
+                <div class="text-lg font-bold text-blue-400 mb-1">10am - 20pm</div>
+                <div class="text-gray-400 text-xs">{t.contact.responseTime}</div>
               </div>
             </div>
           </div>
@@ -196,4 +196,27 @@ const t = getTranslations(lang);
       method.style.transform = 'translateY(0)';
     });
   });
+  
+  // Argentina time display
+  function updateArgentinaTime() {
+    const argentinaTimeElement = document.getElementById('argentina-time');
+    if (!argentinaTimeElement) return;
+    
+    const now = new Date();
+    // Argentina is UTC-3 (or UTC-4 during daylight saving)
+    // Using Intl.DateTimeFormat for proper timezone handling
+    const argentinaTime = new Intl.DateTimeFormat('es-AR', {
+      timeZone: 'America/Argentina/Buenos_Aires',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: false
+    }).format(now);
+    
+    argentinaTimeElement.textContent = argentinaTime;
+  }
+  
+  // Update time immediately and then every second
+  updateArgentinaTime();
+  setInterval(updateArgentinaTime, 1000);
 </script>

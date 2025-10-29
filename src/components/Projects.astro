@@ -23,51 +23,89 @@ const t = getTranslations(lang);
     <!-- Projects Grid -->
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
       
-      <!-- Project 1 - Featured -->
+      <!-- Project 1 - Tiendafull -->
       <div class="lg:col-span-2 project-card group">
         <div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-black border border-gray-800 hover:border-green-400/50 transition-all duration-500">
-          <div class="aspect-video bg-gradient-to-br from-green-400/20 to-blue-500/20 flex items-center justify-center">
-            <div class="text-center">
-              <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-r from-green-400 to-blue-500 rounded-2xl flex items-center justify-center">
-                <span class="text-3xl">🚀</span>
-              </div>
-              <h3 class="text-2xl font-bold text-white mb-2">E-Commerce Platform</h3>
-              <p class="text-gray-400">Plataforma completa de comercio electrónico</p>
+          <div class="aspect-video relative overflow-hidden">
+            <img src="/projects/backgrounds/fondotiendafull.jpeg" alt="Tiendafull" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+            <div class="absolute bottom-4 left-6 right-6">
+              <h3 class="text-3xl font-bold text-white mb-2">Tiendafull</h3>
+              <p class="text-gray-300">{lang === 'es' ? 'Sistema de reservas para mantenimiento' : 'Booking system for maintenance'}</p>
             </div>
           </div>
           
           <div class="p-8">
             <div class="flex items-center justify-between mb-4">
-              <h3 class="text-2xl font-bold text-white">E-Commerce Platform</h3>
+              <h3 class="text-2xl font-bold text-white">Tiendafull</h3>
               <span class="px-3 py-1 bg-green-400/20 text-green-400 rounded-full text-sm font-medium">
                 {t.projects.featured}
               </span>
             </div>
             
             <p class="text-gray-400 mb-6 leading-relaxed">
-              Plataforma de comercio electrónico de alto rendimiento construida con React, Node.js y PostgreSQL. 
-              Incluye sistema de pagos, gestión de inventario y panel de administración completo.
+              {lang === 'es' 
+                ? 'Aplicación web de reservas para mantenimiento de motos y bicicletas. Sistema completo de gestión de turnos, clientes y servicios con panel administrativo integral.'
+                : 'Web application for booking motorcycle and bicycle maintenance services. Complete system for managing appointments, customers and services with comprehensive admin panel.'}
             </p>
             
             <div class="flex flex-wrap gap-2 mb-6">
               <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm">React</span>
+              <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm">Nest.js</span>
               <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm">TypeScript</span>
-              <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm">Node.js</span>
               <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm">PostgreSQL</span>
-              <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm">Stripe</span>
             </div>
             
             <div class="flex gap-4">
-              <a href="#" class="flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-black font-semibold rounded-lg hover:scale-105 transition-transform duration-300">
+              <a href="https://turnos.tiendafull.ar/sign-in" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-black font-semibold rounded-lg hover:scale-105 transition-transform duration-300">
                 <span>{t.projects.viewProject}</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                 </svg>
               </a>
-              <a href="#" class="flex items-center space-x-2 px-6 py-3 border border-gray-600 text-gray-300 font-semibold rounded-lg hover:border-green-400 hover:text-green-400 transition-all duration-300">
-                <span>{t.projects.code}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Project 2 - Codigo12 -->
+      <div class="lg:col-span-2 project-card group">
+        <div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-black border border-gray-800 hover:border-purple-400/50 transition-all duration-500">
+          <div class="aspect-video relative overflow-hidden">
+            <img src="/projects/backgrounds/fondocodigo12.jpg" alt="Codigo12" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+            <div class="absolute bottom-4 left-6 right-6">
+              <h3 class="text-3xl font-bold text-white mb-2">Codigo12</h3>
+              <p class="text-gray-300">{lang === 'es' ? 'Sistema de eventos exclusivos' : 'Exclusive events system'}</p>
+            </div>
+          </div>
+          
+          <div class="p-8">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-2xl font-bold text-white">Codigo12</h3>
+              <span class="px-3 py-1 bg-purple-400/20 text-purple-400 rounded-full text-sm font-medium">
+                {t.projects.featured}
+              </span>
+            </div>
+            
+            <p class="text-gray-400 mb-6 leading-relaxed">
+              {lang === 'es' 
+                ? 'Aplicación web para eventos exclusivos con sistema completo de creación y control de códigos de invitación. Plataforma para gestionar acceso, validación y seguimiento de invitados en tiempo real.'
+                : 'Web application for exclusive events with complete invitation code creation and control system. Platform to manage access, validation and real-time guest tracking.'}
+            </p>
+            
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm">React</span>
+              <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm">Nest.js</span>
+              <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm">TypeScript</span>
+              <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm">Node.js</span>
+            </div>
+            
+            <div class="flex gap-4">
+              <a href="https://codigo12club.com.ar/" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-purple-400 to-pink-500 text-white font-semibold rounded-lg hover:scale-105 transition-transform duration-300">
+                <span>{t.projects.viewProject}</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                 </svg>
               </a>
             </div>
@@ -75,121 +113,51 @@ const t = getTranslations(lang);
         </div>
       </div>
       
-      <!-- Project 2 -->
-      <div class="project-card group">
-        <div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-black border border-gray-800 hover:border-blue-400/50 transition-all duration-500 h-full">
-          <div class="aspect-video bg-gradient-to-br from-blue-400/20 to-purple-500/20 flex items-center justify-center">
-            <div class="text-center">
-              <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-blue-400 to-purple-500 rounded-xl flex items-center justify-center">
-                <span class="text-2xl">📱</span>
-              </div>
-              <h3 class="text-xl font-bold text-white mb-2">Mobile App</h3>
-              <p class="text-gray-400">Aplicación móvil React Native</p>
+      <!-- Project 3 - Referidos -->
+      <div class="lg:col-span-2 project-card group">
+        <div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-black border border-gray-800 hover:border-blue-400/50 transition-all duration-500">
+          <div class="aspect-video relative overflow-hidden">
+            <img src="/projects/backgrounds/referidosfondo.png" alt="Referidos" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+            <div class="absolute bottom-4 left-6 right-6">
+              <h3 class="text-3xl font-bold text-white mb-2">Referidos</h3>
+              <p class="text-gray-300">{lang === 'es' ? 'Plataforma de bolsa de trabajo' : 'Job board platform'}</p>
             </div>
           </div>
           
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-white mb-3">TaskFlow Mobile</h3>
-            <p class="text-gray-400 mb-4 text-sm leading-relaxed">
-              Aplicación móvil para gestión de tareas con sincronización en tiempo real y notificaciones push.
-            </p>
-            
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs">React Native</span>
-              <span class="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs">Firebase</span>
-              <span class="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs">Redux</span>
+          <div class="p-8">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-2xl font-bold text-white">Referidos</h3>
+              <span class="px-3 py-1 bg-blue-400/20 text-blue-400 rounded-full text-sm font-medium">
+                {t.projects.featured}
+              </span>
             </div>
             
-            <a href="#" class="inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors duration-300">
-              <span class="text-sm font-medium">Ver Proyecto</span>
-              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-              </svg>
-            </a>
+            <p class="text-gray-400 mb-6 leading-relaxed">
+              {lang === 'es' 
+                ? 'Aplicación web de bolsa de trabajo que conecta profesionales con oportunidades laborales. Sistema completo de gestión de ofertas, candidatos, referencias y seguimiento de procesos de contratación.'
+                : 'Job board web application connecting professionals with job opportunities. Complete system for managing job postings, candidates, references and hiring process tracking.'}
+            </p>
+            
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm">React</span>
+              <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm">Nest.js</span>
+              <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm">TypeScript</span>
+              <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm">PostgreSQL</span>
+            </div>
+            
+            <div class="flex gap-4">
+              <a href="#" class="flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-blue-400 to-cyan-500 text-white font-semibold rounded-lg hover:scale-105 transition-transform duration-300">
+                <span>{t.projects.viewProject}</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
       </div>
       
-      <!-- Project 3 -->
-      <div class="project-card group">
-        <div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-black border border-gray-800 hover:border-purple-400/50 transition-all duration-500 h-full">
-          <div class="aspect-video bg-gradient-to-br from-purple-400/20 to-pink-500/20 flex items-center justify-center">
-            <div class="text-center">
-              <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-purple-400 to-pink-500 rounded-xl flex items-center justify-center">
-                <span class="text-2xl">🎨</span>
-              </div>
-              <h3 class="text-xl font-bold text-white mb-2">Design System</h3>
-              <p class="text-gray-400">Sistema de diseño completo</p>
-            </div>
-          </div>
-          
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-white mb-3">UI Component Library</h3>
-            <p class="text-gray-400 mb-4 text-sm leading-relaxed">
-              Biblioteca de componentes reutilizables con Storybook y documentación completa.
-            </p>
-            
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs">Nest.js</span>
-              <span class="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs">Storybook</span>
-              <span class="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs">Tailwind</span>
-            </div>
-            
-            <a href="#" class="inline-flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors duration-300">
-              <span class="text-sm font-medium">Ver Proyecto</span>
-              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Project 4 -->
-      <div class="project-card group">
-        <div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-black border border-gray-800 hover:border-red-400/50 transition-all duration-500 h-full">
-          <div class="aspect-video bg-gradient-to-br from-red-400/20 to-orange-500/20 flex items-center justify-center">
-            <div class="text-center">
-              <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-red-400 to-orange-500 rounded-xl flex items-center justify-center">
-                <span class="text-2xl">⚡</span>
-              </div>
-              <h3 class="text-xl font-bold text-white mb-2">Performance Tool</h3>
-              <p class="text-gray-400">Herramienta de optimización</p>
-            </div>
-          </div>
-          
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-white mb-3">WebPerf Analyzer</h3>
-            <p class="text-gray-400 mb-4 text-sm leading-relaxed">
-              Herramienta para análisis de rendimiento web con métricas en tiempo real y recomendaciones.
-            </p>
-            
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs">Astro</span>
-              <span class="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs">Web APIs</span>
-              <span class="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs">Charts.js</span>
-            </div>
-            
-            <a href="#" class="inline-flex items-center space-x-2 text-red-400 hover:text-red-300 transition-colors duration-300">
-              <span class="text-sm font-medium">Ver Proyecto</span>
-              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-      
-    </div>
-    
-    <!-- View All Projects Button -->
-    <div class="text-center mt-12">
-      <a href="#" class="inline-flex items-center space-x-2 px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:border-green-400 hover:text-green-400 transition-all duration-300 backdrop-blur-sm">
-        <span>{t.projects.viewAllProjects}</span>
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-        </svg>
-      </a>
     </div>
   </div>
 </section>

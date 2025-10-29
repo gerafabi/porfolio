@@ -77,7 +77,7 @@ export const translations: Record<string, Translations> = {
       downloadCV: "Descargar CV"
     },
     hero: {
-      greeting: "👋 Hola, soy",
+      greeting: "Hola, soy",
       name: "Gerardo",
       title: "Fullstack Developer",
       subtitle: "Creando experiencias digitales excepcionales con las tecnologías más avanzadas. Especializado en React, Nest.js, Astro y arquitecturas modernas.",
@@ -97,7 +97,7 @@ export const translations: Record<string, Translations> = {
     },
     projects: {
       title: "Proyectos",
-      subtitle: "Una selección de mis trabajos más destacados, desde aplicaciones web modernas hasta experiencias interactivas únicas.",
+      subtitle: "Algunos proyectos más relevantes en los que aporté y desarrollé activamente",
       featured: "Destacado",
       viewProject: "Ver Proyecto",
       code: "Código",
@@ -115,13 +115,12 @@ export const translations: Record<string, Translations> = {
     },
     contact: {
       title: "Contacto",
-      subtitle: "¿Tienes un proyecto en mente? Me encantaría escuchar sobre tu idea y cómo puedo ayudarte a hacerla realidad.",
+      subtitle: "Conectemos y trabajemos juntos en tu próximo proyecto digital.",
       sendMessage: "Envíame un mensaje",
       name: "Nombre",
       email: "Email",
       subject: "Asunto",
       message: "Mensaje",
-      otherWays: "Otras formas de contactarme",
       availableForProjects: "Disponible para nuevos proyectos",
       responseTime: "Tiempo de respuesta",
       projectsCompleted: "Proyectos completados",
@@ -147,7 +146,7 @@ export const translations: Record<string, Translations> = {
       downloadCV: "Download CV"
     },
     hero: {
-      greeting: "👋 Hello, I'm",
+      greeting: "Hello, I'm",
       name: "Gerardo",
       title: "Fullstack Developer",
       subtitle: "Creating exceptional digital experiences with the most advanced technologies. Specialized in React, Nest.js, Astro and modern architectures.",
@@ -167,7 +166,7 @@ export const translations: Record<string, Translations> = {
     },
     projects: {
       title: "Projects",
-      subtitle: "A selection of my most outstanding work, from modern web applications to unique interactive experiences.",
+      subtitle: "Some of the most relevant projects where I actively contributed and developed",
       featured: "Featured",
       viewProject: "View Project",
       code: "Code",
@@ -185,7 +184,7 @@ export const translations: Record<string, Translations> = {
     },
     contact: {
       title: "Contact",
-      subtitle: "Do you have a project in mind? I'd love to hear about your idea and how I can help you make it a reality.",
+      subtitle: "Let's connect and work together on your next digital project.",
       sendMessage: "Send me a message",
       name: "Name",
       email: "Email",

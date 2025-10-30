@@ -112,10 +112,10 @@ const otherPath = otherLang === 'en' ? `/en${currentPath}` : `/es${currentPath}`
         <div class="pt-4 border-t border-gray-800">
           <p class="text-sm text-gray-400 mb-2">Idioma / Language:</p>
           <div class="flex space-x-2">
-            <a href={currentPath} class={`flex-1 px-4 py-2 rounded-lg font-semibold text-center transition-all duration-300 ${lang === 'es' ? 'bg-green-400 text-black' : 'bg-gray-800 text-gray-300 hover:bg-gray-700'}`}>
+            <a href={`/es${currentPath}`} class={`flex-1 px-4 py-2 rounded-lg font-semibold text-center transition-all duration-300 ${lang === 'es' ? 'bg-green-400 text-black' : 'bg-gray-800 text-gray-300 hover:bg-gray-700'}`}>
               🇪🇸 Español
             </a>
-            <a href={otherPath} class={`flex-1 px-4 py-2 rounded-lg font-semibold text-center transition-all duration-300 ${lang === 'en' ? 'bg-green-400 text-black' : 'bg-gray-800 text-gray-300 hover:bg-gray-700'}`}>
+            <a href={`/en${currentPath}`} class={`flex-1 px-4 py-2 rounded-lg font-semibold text-center transition-all duration-300 ${lang === 'en' ? 'bg-green-400 text-black' : 'bg-gray-800 text-gray-300 hover:bg-gray-700'}`}>
               🇺🇸 English
             </a>
           </div>

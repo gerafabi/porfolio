@@ -18,31 +18,31 @@ const canonicalURL = new URL(canonical || Astro.url.pathname, Astro.site);
     <link rel="icon" type="image/jpg" href="/logogera.jpg" />
     <meta name="generator" content={Astro.generator} />
     
-    <!-- SEO Meta Tags -->
+    
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
     
-    <!-- Open Graph / Facebook -->
+    
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={new URL(image, Astro.site)} />
     
-    <!-- Twitter -->
+    
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={canonicalURL} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={new URL(image, Astro.site)} />
     
-    <!-- Performance -->
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
     
-    <!-- Structured Data -->
+    
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -71,7 +71,7 @@ const canonicalURL = new URL(canonical || Astro.url.pathname, Astro.site);
       <slot />
     </div>
     
-    <!-- Global Styles -->
+    
     <style>
       :root {
         --primary: #00ff88;
@@ -104,7 +104,7 @@ const canonicalURL = new URL(canonical || Astro.url.pathname, Astro.site);
         font-family: 'JetBrains Mono', monospace;
       }
       
-      /* Custom scrollbar */
+      
       ::-webkit-scrollbar {
         width: 8px;
       }
@@ -122,12 +122,12 @@ const canonicalURL = new URL(canonical || Astro.url.pathname, Astro.site);
         background: #00cc6a;
       }
       
-      /* Smooth animations */
+      
       * {
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       }
       
-      /* Glow effects */
+      
       .glow {
         box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
       }

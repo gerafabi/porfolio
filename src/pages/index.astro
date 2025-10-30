@@ -1,28 +1,25 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Hero from '../components/Hero.astro';
-import About from '../components/About.astro';
-import Projects from '../components/Projects.astro';
-import Clients from '../components/Clients.astro';
-import Contact from '../components/Contact.astro';
-import Footer from '../components/Footer.astro';
-import WhatsAppButton from '../components/WhatsAppButton.astro';
+if (Astro.request.url) {
+  
+}
 ---
 
-<Layout 
-  title="Gerardo Marcovics - Fullstack Developer"
-  description="Desarrollador Fullstack especializado en tecnologías modernas, trayendo ideas de clientes a la realidad con la mejor calidad."
-  image="/og-image.jpg"
->
-  <Header />
-  <main>
-    <Hero />
-    <About />
-    <Projects />
-    <Clients />
-    <Contact />
-  </main>
-  <Footer />
-  <WhatsAppButton />
-</Layout>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content="0; url=/en/" />
+    <link rel="canonical" href="/en/" />
+    <title>Redirecting…</title>
+    <script>
+      
+      if (location.pathname === '/' || location.pathname === '') {
+        location.replace('/en/');
+      }
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <p>Redirecting to <a href="/en/">English version</a>…</p>
+    </noscript>
+  </body>
+</html>

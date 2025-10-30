@@ -1,5 +1,4 @@
 ---
-// Contact section
 import { getTranslations } from '../utils/translations';
 
 const lang = Astro.url.pathname.startsWith('/en') ? 'en' : 'es';
@@ -10,7 +9,7 @@ const t = getTranslations(lang);
   <div class="container mx-auto px-6">
     <div class="max-w-4xl mx-auto">
       
-      <!-- Section Header -->
+      
       <div class="text-center mb-16">
         <h2 class="text-5xl md:text-6xl font-black mb-6">
           <span class="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
@@ -22,11 +21,11 @@ const t = getTranslations(lang);
         </p>
       </div>
       
-      <!-- Contact Info -->
+      
       <div class="max-w-4xl mx-auto">
         <div class="space-y-8">
             
-            <!-- Contact Methods -->
+            
             <div class="space-y-6">
               <h3 class="text-2xl font-bold text-white mb-6">{t.contact.otherWays}</h3>
               
@@ -79,7 +78,7 @@ const t = getTranslations(lang);
               </div>
             </div>
             
-            <!-- Availability Status -->
+            
             <div class="bg-gradient-to-r from-green-400/10 to-blue-500/10 border border-green-400/30 rounded-2xl p-6">
               <div class="flex items-center space-x-3 mb-4">
                 <div class="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
@@ -93,7 +92,7 @@ const t = getTranslations(lang);
               </p>
             </div>
             
-            <!-- Quick Stats -->
+            
             <div class="grid grid-cols-2 gap-4">
               <div class="text-center p-4 bg-gray-800/50 rounded-lg border border-gray-700">
                 <div class="text-lg font-bold text-green-400 mb-1" id="argentina-time"></div>
@@ -111,7 +110,7 @@ const t = getTranslations(lang);
 </section>
 
 <script>
-  // Add smooth hover effects
+  
   document.querySelectorAll('.contact-method').forEach(method => {
     method.addEventListener('mouseenter', () => {
       method.style.transform = 'translateY(-2px)';
@@ -122,14 +121,13 @@ const t = getTranslations(lang);
     });
   });
 
-  // Argentina time display
+  
   function updateArgentinaTime() {
     const argentinaTimeElement = document.getElementById('argentina-time');
     if (!argentinaTimeElement) return;
 
     const now = new Date();
-    // Argentina is UTC-3 (or UTC-4 during daylight saving)
-    // Using Intl.DateTimeFormat for proper timezone handling
+    
     const argentinaTime = new Intl.DateTimeFormat('es-AR', {
       timeZone: 'America/Argentina/Buenos_Aires',
       hour: '2-digit',
@@ -141,7 +139,7 @@ const t = getTranslations(lang);
     argentinaTimeElement.textContent = argentinaTime;
   }
 
-  // Update time immediately and then every second
+  
   updateArgentinaTime();
   setInterval(updateArgentinaTime, 1000);
 </script>

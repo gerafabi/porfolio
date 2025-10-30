@@ -1,5 +1,4 @@
 ---
-// Footer component
 import { getTranslations } from '../utils/translations';
 
 const lang = Astro.url.pathname.startsWith('/en') ? 'en' : 'es';
@@ -10,10 +9,10 @@ const t = getTranslations(lang);
   <div class="container mx-auto px-6">
     <div class="max-w-6xl mx-auto">
       
-      <!-- Main Footer Content -->
+      
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
         
-        <!-- Brand -->
+        
         <div class="md:col-span-2">
           <div class="flex items-center space-x-2 mb-4">
             <div class="w-10 h-10 rounded-lg overflow-hidden">
@@ -25,7 +24,7 @@ const t = getTranslations(lang);
             {t.footer.description}
           </p>
           
-          <!-- Social Links -->
+          
           <div class="flex space-x-4">
             <a href="https://github.com/gerafabi" target="_blank" rel="noopener noreferrer" 
                class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors duration-300">
@@ -57,7 +56,7 @@ const t = getTranslations(lang);
           </div>
         </div>
         
-        <!-- Quick Links -->
+        
         <div>
           <h3 class="text-white font-semibold mb-4">{t.footer.quickLinks}</h3>
           <ul class="space-y-3">
@@ -68,7 +67,7 @@ const t = getTranslations(lang);
           </ul>
         </div>
         
-        <!-- Services -->
+        
         <div>
           <h3 class="text-white font-semibold mb-4">{t.footer.services}</h3>
           <ul class="space-y-3">
@@ -80,16 +79,16 @@ const t = getTranslations(lang);
         </div>
       </div>
       
-      <!-- Bottom Bar -->
+      
       <div class="border-t border-gray-800 pt-8">
         <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           
-          <!-- Copyright -->
+          
           <div class="text-gray-400 text-sm">
             © <span id="current-year">2024</span> www.geradev.com Todos los derechos reservados.
           </div>
           
-          <!-- CV Download Links -->
+          
           <div class="flex space-x-4">
             <a href="/CV-ESPAÑOL.pdf" download 
                class="flex items-center space-x-2 text-gray-400 hover:text-green-400 transition-colors duration-300 text-sm">
@@ -103,7 +102,7 @@ const t = getTranslations(lang);
             </a>
           </div>
           
-          <!-- Back to Top -->
+          
           <button id="back-to-top" 
                   class="flex items-center space-x-2 text-gray-400 hover:text-green-400 transition-colors duration-300 text-sm">
             <span>{t.footer.backToTop}</span>
@@ -118,13 +117,13 @@ const t = getTranslations(lang);
 </footer>
 
 <script>
-  // Update current year automatically
+  
   const currentYearElement = document.getElementById('current-year');
   if (currentYearElement) {
     currentYearElement.textContent = new Date().getFullYear();
   }
 
-  // Back to top functionality
+  
   const backToTopBtn = document.getElementById('back-to-top');
   
   backToTopBtn?.addEventListener('click', () => {
@@ -134,7 +133,7 @@ const t = getTranslations(lang);
     });
   });
   
-  // Show/hide back to top button based on scroll position
+  
   window.addEventListener('scroll', () => {
     if (window.scrollY > 300) {
       backToTopBtn?.classList.remove('opacity-0');
@@ -145,7 +144,7 @@ const t = getTranslations(lang);
     }
   });
   
-  // Smooth scrolling for footer links
+  
   document.querySelectorAll('footer a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();

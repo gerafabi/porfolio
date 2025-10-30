@@ -1,0 +1,30 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Hero from '../../components/Hero.astro';
+import About from '../../components/About.astro';
+import Projects from '../../components/Projects.astro';
+import Clients from '../../components/Clients.astro';
+import Contact from '../../components/Contact.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
+---
+
+<Layout 
+  title="Gerardo Marcovics - Fullstack Developer"
+  description="Desarrollador Fullstack especializado en tecnologías modernas, trayendo ideas de clientes a la realidad con la mejor calidad."
+  image="/og-image.jpg"
+>
+  <Header />
+  <main>
+    <Hero />
+    <About />
+    <Projects />
+    <Clients />
+    <Contact />
+  </main>
+  <Footer />
+  <WhatsAppButton />
+</Layout>
+
+

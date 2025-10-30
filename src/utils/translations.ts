@@ -79,8 +79,8 @@ export const translations: Record<string, Translations> = {
     hero: {
       greeting: "Hola, soy",
       name: "Gerardo",
-      title: "Fullstack Developer",
-      subtitle: "Creando experiencias digitales excepcionales con las tecnologías más avanzadas. Especializado en React, Nest.js, Astro y arquitecturas modernas.",
+      title: "Analista en sistemas y Desarrollador Fullstack",
+      subtitle: "Trayendo tus ideas a la realidad con desarrollo de vanguardia.",
       viewProjects: "Ver Proyectos",
       contact: "Contactar"
     },
@@ -88,9 +88,9 @@ export const translations: Record<string, Translations> = {
       title: "Sobre Mí",
       greeting: "Saludos",
       nickname: "Mis amigos me llaman Gera!",
-      description1: "Soy un Desarrollador Fullstack apasionado por crear experiencias digitales excepcionales que combinan diseño innovador con tecnología de vanguardia.",
-      description2: "Con experiencia en el desarrollo web fullstack, he trabajado en proyectos para empresas privadas y gubernamentales, contribuyendo con soluciones tecnológicas innovadoras.",
-      description3: "Mi enfoque se centra en escribir código limpio, escalable y mantenible, utilizando las últimas tecnologías como React, Nest.js, TypeScript y Astro para crear aplicaciones web modernas y de alto rendimiento.",
+      description1: "Soy un Analista en sistemas y desarrollador apasionado por crear experiencias digitales excepcionales combinando las últimas tecnologías y trayendo ideas de mis clientes a proyectos reales.",
+      description2: "Con experiencia en el desarrollo web fullstack, he trabajado en proyectos desde simples páginas hasta integraciones con inteligencia artificial; amo los desafíos.",
+      description3: "Mi enfoque se centra en escribir código limpio, escalable y mantenible, utilizando las últimas tecnologías para crear aplicaciones web modernas y de alto rendimiento.",
       mainTechnologies: "Tecnologías Principales",
       contact: "Contactar",
       viewProjects: "Ver Proyectos"
@@ -105,7 +105,7 @@ export const translations: Record<string, Translations> = {
     },
     clients: {
       title: "Clientes",
-      subtitle: "He tenido el privilegio de trabajar con empresas innovadoras y equipos talentosos en proyectos que marcan la diferencia.",
+      subtitle: "He tenido el privilegio de trabajar con empresas y equipos talentosos en proyectos que marcan la diferencia llevando mis capacidades al límite.",
       whatClientsSay: "Lo que dicen mis clientes",
       availableForProjects: "Disponible para nuevos proyectos",
       responseTime: "Tiempo de respuesta",
@@ -148,8 +148,8 @@ export const translations: Record<string, Translations> = {
     hero: {
       greeting: "Hello, I'm",
       name: "Gerardo",
-      title: "Fullstack Developer",
-      subtitle: "Creating exceptional digital experiences with the most advanced technologies. Specialized in React, Nest.js, Astro and modern architectures.",
+      title: "Systems Analyst and Fullstack Developer",
+      subtitle: "Bringing your ideas to life with cutting‑edge development.",
       viewProjects: "View Projects",
       contact: "Contact"
     },
@@ -157,9 +157,9 @@ export const translations: Record<string, Translations> = {
       title: "About Me",
       greeting: "Greetings",
       nickname: "My friends call me Gera!",
-      description1: "I'm a Fullstack Developer passionate about creating exceptional digital experiences that combine innovative design with cutting-edge technology.",
-      description2: "With experience in fullstack web development, I've worked on projects for private companies and government organizations, contributing with innovative technological solutions.",
-      description3: "My approach focuses on writing clean, scalable and maintainable code, using the latest technologies like React, Nest.js, TypeScript and Astro to create modern and high-performance web applications.",
+      description1: "I'm a Systems Analyst and developer passionate about creating exceptional digital experiences by combining the latest technologies and bringing my clients’ ideas to real projects.",
+      description2: "With full‑stack web development experience, I’ve worked on projects ranging from simple pages to integrations with artificial intelligence — I love challenges.",
+      description3: "My focus is on writing clean, scalable, and maintainable code, using the latest technologies to build modern, high‑performance web applications.",
       mainTechnologies: "Main Technologies",
       contact: "Contact",
       viewProjects: "View Projects"

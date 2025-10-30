@@ -58,13 +58,14 @@ const otherPath = otherLang === 'en' ? `/en${currentPath}` : `/es${currentPath}`
         </div>
         
         
-        <div class="relative group">
+        <div class="relative group flex items-center">
           <button id="cv-dropdown" class="flex items-center space-x-2 bg-gradient-to-r from-green-400 to-blue-500 text-black px-4 py-2 rounded-lg font-semibold hover:scale-105 transition-transform duration-300">
             <span>{t.nav.downloadCV}</span>
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
             </svg>
           </button>
+   
           
           
           <div id="cv-menu" class="absolute right-0 mt-2 w-48 bg-gray-900 border border-gray-700 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
@@ -83,7 +84,7 @@ const otherPath = otherLang === 'en' ? `/en${currentPath}` : `/es${currentPath}`
           </div>
         </div>
       </div>
-      
+       <img src="/argentina.gif" alt="Argentina" class="ml-3 h-6 w-auto rounded-sm select-none pointer-events-none" />
       
       <button id="mobile-menu-btn" class="md:hidden text-white">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

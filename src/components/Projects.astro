@@ -26,11 +26,11 @@ const t = getTranslations(lang);
       <div class="lg:col-span-2 project-card group">
         <div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-black border border-gray-800">
           <div class="aspect-[16/10] relative overflow-hidden">
-            <img src="/projects/backgrounds/fondotiendafull.jpeg" alt="Tiendafull" class="w-full h-full object-cover" />
+            <img src="/projects/backgrounds/fondotiendafull.jpeg" alt="Tienda Full" class="w-full h-full object-cover" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
             <div class="absolute bottom-4 left-6 right-6">
               <div class="flex items-center justify-between mb-2">
-                <h3 class="text-3xl font-bold text-white">Tiendafull</h3>
+                <h3 class="text-3xl font-bold text-white">Tienda Full</h3>
                 <span class="px-3 py-1 bg-green-400/20 text-green-300 rounded-full text-sm font-medium">{t.projects.featured}</span>
               </div>
               <p class="text-gray-300">{lang === 'es' ? 'Sistema de reservas para mantenimiento' : 'Booking system for maintenance'}</p>
@@ -184,6 +184,49 @@ const t = getTranslations(lang);
             
             <div class="flex gap-4">
               <a href="https://www.manifestor.ai/" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-emerald-400 to-green-500 text-black font-semibold rounded-lg">
+                <span>{t.projects.viewProject}</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <div class="lg:col-span-2 project-card group">
+        <div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-black border border-gray-800">
+          <div class="aspect-[16/10] relative overflow-hidden">
+            <img src="/projects/backgrounds/gifworlds.gif" alt="GifWorlds" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+            <div class="absolute bottom-4 left-6 right-6">
+              <div class="flex items-center justify-between mb-2">
+                <h3 class="text-3xl font-bold text-white">GifWorlds</h3>
+                <span class="px-3 py-1 bg-pink-400/20 text-pink-300 rounded-full text-sm font-medium">{t.projects.featured}</span>
+              </div>
+              <p class="text-gray-300">{lang === 'es' ? 'Buscador y descargador de GIFs' : 'GIF search and download platform'}</p>
+            </div>
+          </div>
+          
+          <div class="p-8">
+            
+            
+            <p class="text-gray-400 mb-6 leading-relaxed">
+              {lang === 'es' 
+                ? 'Aplicación web para buscar y descargar GIFs en alta calidad. Plataforma intuitiva con búsqueda en tiempo real, vista previa de GIFs y descarga en diferentes resoluciones.'
+                : 'Web application to search and download high-quality GIFs. Intuitive platform with real-time search, GIF preview and download in different resolutions.'}
+            </p>
+            
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm">React</span>
+              <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm">Bootstrap</span>
+              <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm">JavaScript</span>
+              <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm">API Integration</span>
+            </div>
+            
+            <div class="flex gap-4">
+              <a href="https://gifworlds.netlify.app/" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-pink-400 to-purple-500 text-white font-semibold rounded-lg hover:scale-105 transition-transform duration-300">
                 <span>{t.projects.viewProject}</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>

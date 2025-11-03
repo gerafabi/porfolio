@@ -49,7 +49,6 @@ export interface Translations {
     email: string;
     subject: string;
     message: string;
-    otherWays: string;
     availableForProjects: string;
     responseTime: string;
     projectsCompleted: string;
@@ -190,7 +189,6 @@ export const translations: Record<string, Translations> = {
       email: "Email",
       subject: "Subject",
       message: "Message",
-      otherWays: "Other ways to contact me",
       availableForProjects: "Available for new projects",
       responseTime: "Response time",
       projectsCompleted: "Projects completed",

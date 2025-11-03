@@ -9,5 +9,12 @@ export default defineConfig({
   compressHTML: true,
   build: {
     inlineStylesheets: 'auto'
+  },
+  vite: {
+    server: {
+      watch: {
+        ignored: ['**/dist/**', '**/node_modules/**']
+      }
+    }
   }
 });

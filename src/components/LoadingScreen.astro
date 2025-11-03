@@ -1,0 +1,54 @@
+---
+const lang = Astro.url.pathname.includes('/es') ? 'es' : 'en';
+const welcomeText = lang === 'es' ? 'Bienvenid@' : 'Welcome';
+---
+
+<div id="loading-screen" class="fixed inset-0 z-50 flex items-center justify-center bg-black">
+  <h1 class="text-6xl md:text-8xl font-bold animate-gradient bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+    {welcomeText}
+  </h1>
+</div>
+
+<style>
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient 3s ease infinite;
+  }
+
+  #loading-screen {
+    transition: opacity 1s ease-out;
+  }
+</style>
+
+<script is:inline>
+  if (!window.__loadingHandled) {
+    window.__loadingHandled = true;
+    document.body.style.overflow = 'hidden';
+    
+    setTimeout(function() {
+      var loadingScreen = document.getElementById('loading-screen');
+      var app = document.getElementById('app');
+      
+      if (loadingScreen) loadingScreen.style.opacity = '0';
+      if (app) app.style.opacity = '1';
+      
+      setTimeout(function() {
+        if (loadingScreen) loadingScreen.style.display = 'none';
+        document.body.style.overflow = '';
+      }, 1000);
+    }, 4500);
+  }
+</script>
+

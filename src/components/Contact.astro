@@ -95,11 +95,11 @@ const t = getTranslations(lang);
             
             <div class="grid grid-cols-2 gap-4">
               <div class="text-center p-4 bg-gray-800/50 rounded-lg border border-gray-700">
-                <div class="text-lg font-bold text-green-400 mb-1" id="argentina-time"></div>
-                <div class="text-gray-400 text-xs">{lang === 'es' ? 'Hora Argentina' : 'Argentina Time'}</div>
+                <div class="text-lg font-bold text-green-400 mb-1">GMT-3</div>
+                <div class="text-gray-400 text-xs">{lang === 'es' ? 'Zona Horaria' : 'Time Zone'}</div>
               </div>
               <div class="text-center p-4 bg-gray-800/50 rounded-lg border border-gray-700">
-                <div class="text-lg font-bold text-blue-400 mb-1">10am - 20pm</div>
+                <div class="text-lg font-bold text-blue-400 mb-1">10am - 8pm</div>
                 <div class="text-gray-400 text-xs">{t.contact.responseTime}</div>
               </div>
             </div>
@@ -109,37 +109,3 @@ const t = getTranslations(lang);
   </div>
 </section>
 
-<script>
-  
-  document.querySelectorAll('.contact-method').forEach(method => {
-    method.addEventListener('mouseenter', () => {
-      method.style.transform = 'translateY(-2px)';
-    });
-
-    method.addEventListener('mouseleave', () => {
-      method.style.transform = 'translateY(0)';
-    });
-  });
-
-  
-  function updateArgentinaTime() {
-    const argentinaTimeElement = document.getElementById('argentina-time');
-    if (!argentinaTimeElement) return;
-
-    const now = new Date();
-    
-    const argentinaTime = new Intl.DateTimeFormat('es-AR', {
-      timeZone: 'America/Argentina/Buenos_Aires',
-      hour: '2-digit',
-      minute: '2-digit',
-      second: '2-digit',
-      hour12: false
-    }).format(now);
-
-    argentinaTimeElement.textContent = argentinaTime;
-  }
-
-  
-  updateArgentinaTime();
-  setInterval(updateArgentinaTime, 1000);
-</script>
